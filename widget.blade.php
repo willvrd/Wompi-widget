@@ -6,8 +6,16 @@
 	    <div class="panel-heading">
 	      <h4 class="panel-title">
 	        <a data-toggle="collapse" href="#collapseWidget">
-	        	<i class="fa fa-credit-card icon-title" aria-hidden="true"></i>
-	        	PAGAR CON WOMPI
+	        	
+	        	<div class="hidden-xs">
+	        		<i class="fa fa-credit-card icon-title" aria-hidden="true"></i> 
+	        		PAGAR CON WOMPI
+	        	</div>
+	        	<div class="visible-xs">
+	        		<i class="fa fa-credit-card icon-title" aria-hidden="true"></i>
+	        		PAGAR
+	        	</div>		
+	        	
 	        </a>
 	      </h4>
 	    </div>
@@ -45,10 +53,10 @@
 		position: relative;
 	}
 	.wompi-widget{
-		position: fixed;
+		position: absolute;
 	 	z-index: 9999;
 	 	right: 0;
-	 	top: 28%;
+	 	top: -50px;
 	}
 	.wompi-widget .btn{
 		margin-top: 10px;
@@ -65,6 +73,36 @@
 	.wompi-widget .input-group label{
 		display: block;
 	}
+
+
+	/* Landscape tablets and medium desktops */
+	@media (min-width: 992px) and (max-width: 1199px) {
+		.wompi-widget{
+			right: 25%;
+    		top: -60px
+		}
+	}
+
+	/* Portrait tablets and small desktops */
+	@media (min-width: 768px) and (max-width: 991px) {
+		.wompi-widget{
+			right: 25%;
+    		top: -60px
+		}
+	}
+
+	/* Landscape phones and portrait tablets */
+	@media (max-width: 767px) {
+
+	}
+
+	/* Portrait phones and smaller */
+	@media (max-width: 480px) {
+		.wompi-widget .panel-title{
+			font-size: 12px;
+		}
+	}
+
 </style>
 
 
@@ -76,9 +114,10 @@
     <script type="text/javascript">
 
     	
-    	var publicKey = 'pub_test_Q5yDA9xoKdePzhSGeVe9HAez7HgGORGf'
+    	var publicKey = "{{env('WOMPI_PUBLICKEY')}}";
     	var currency = 'COP'
     	var minAmount = 1500
+
     	
     	/** Create the Reference  */
     	function makeReference(){

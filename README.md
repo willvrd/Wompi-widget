@@ -1,13 +1,14 @@
-# Laravel - Widget
+# AsgardCMS / Laravel - Widget
 ## Payment Method - Wompi
 
-#### Requirements
+#### Steps
 
-- xxxxx
+- Add in your .env file:
+    WOMPI_PUBLICKEY=mypublickey
     
 #### Data Configuration (TEST)
 
-- publicKey Example: 
+- publicKey: 
     pub_test_Q5yDA9xoKdePzhSGeVe9HAez7HgGORGf
 
 
