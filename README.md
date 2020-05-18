@@ -1,10 +1,19 @@
 # AsgardCMS / Laravel - Widget
 ## Payment Method - Wompi
 
+
+#### Requirements
+
+- Boostrap Framework (v3)
+- Font Awesome (v4.7)
+
 #### Steps
 
-- Add in your .env file:
+1. Add in your .env file:
     WOMPI_PUBLICKEY=mypublickey
+
+2. Add in your blade file:
+	@include('wompi.widget')
     
 #### Data Configuration (TEST)
 
